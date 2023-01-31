@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class char1control : MonoBehaviour
 {
-    [SerializeField] private int DistanceToGround = 0;
+    public int DistanceToGround = 0;
     Ray2D groundTest;
     Rigidbody2D char1rb = new Rigidbody2D();
     [SerializeField] private float JumpHeight = 0f;
