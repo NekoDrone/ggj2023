@@ -29,13 +29,13 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private KeyCode p2DodgeKey = KeyCode.RightArrow;
     [SerializeField] private KeyCode p2SpecialKey = KeyCode.UpArrow;
 
-    [SerializeField] private Player player1;    // TODO: remove the SerializeField
-    [SerializeField] private Player player2;
-
-    [SerializeField] private CombatUI_Player combatUIPlayer;
-
+    // reference to Player1 and Player2 objects in the scene
+    private Player player1;
+    private Player player2;
     private Collider2D player1Col;
     private Collider2D player2Col;
+
+    [SerializeField] private CombatUI_Player combatUIPlayer;
 
     private void Awake()
     {
@@ -58,8 +58,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player1Col = player1.GetComponent<Collider2D>();
-        player2Col = player2.GetComponent<Collider2D>();
+
     }
 
     public void LoadPlayers(PlayerClass p1, PlayerClass p2)

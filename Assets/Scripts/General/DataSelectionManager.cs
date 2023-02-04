@@ -8,8 +8,8 @@ using UnityEngine;
 public class DataSelectionManager : MonoBehaviour
 {
     public static ArenaSelection SelectedArena { get; private set; } = ArenaSelection.Fridge;
-    public static PlayerClass SelectedP1Class { get; private set; } = PlayerClass.Carrot;
-    public static PlayerClass SelectedP2Class { get; private set; } = PlayerClass.Daikon;
+    public static PlayerClass SelectedP1Class { get; private set; } = PlayerClass.Onion;
+    public static PlayerClass SelectedP2Class { get; private set; } = PlayerClass.Potato;
 
     /// <summary>
     /// To be called by Button OnClick callback
