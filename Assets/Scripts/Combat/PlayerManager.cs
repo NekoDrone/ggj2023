@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    private static PlayerManager instance;
-    public static PlayerManager Instance
-    {
-        get { return instance; }
-    }
+    public static PlayerManager Instance { get; private set; } = null;
 
     [SerializeField] private Player player1;
     [SerializeField] private Player player2;
 
     private Collider2D player1Col;
     private Collider2D player2Col;
+
+    private void Awake()
+    {
+        // initialise singleton
+        if (Instance == null)
+            Instance = this;
+        else
+        {
+            Debug.Log("PlayerManager already exists in " + Instance.gameObject.name + ", destroying copy in " + gameObject.name);
+            Destroy(this);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
