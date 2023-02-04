@@ -19,7 +19,7 @@ public class GameLoader : MonoBehaviour
     private void LoadGame()
     {
         // load environment
-        levelSelector.ChangeAssets(2);//(int)DataSelectionManager.SelectedArena);
+        levelSelector.ChangeAssets((int)DataSelectionManager.SelectedArena);
 
         // TODO: load players
 
