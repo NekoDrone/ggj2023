@@ -24,10 +24,14 @@ public class LevelSelect : MonoBehaviour
         hazloader = GetComponent<HazardsLoader>();
         hazspawner = GetComponent<HazardSpawner>();
         hazspawner.SetActiveHazard(hazloader.GetHazard(1));
+        // ChangeAssets(3);
     }
 
     public void ChangeAssets(int levelcode)
     {
+        if(levelcode == 3){
+            mid.transform.position = new Vector3(0f,-2.1f,0f);
+        }
         Sprite[] sprites = new Sprite[4];
         sprites = envloader.GetLevelAssets(levelcode);
         floor.GetComponent<SpriteRenderer>().sprite = sprites[0];
