@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     private bool dodgeInputEnabled = true;
 
     [SerializeField] private CharacterClass specialMove;
+    [SerializeField] private bool isPlayerOne = true;
+    private float xBound;
 
     // Start is called before the first frame update
     void Start()
@@ -165,6 +167,15 @@ public class Player : MonoBehaviour
     {
         while (true) {
             transform.position += forwardDir * forwardMoveSpeed * Time.deltaTime;
+            float xPos;
+            if (isPlayerOne) {
+                xPos = Mathf.Min(transform.position.x, xBound);
+            }
+            else {
+                xPos = Mathf.Max(transform.position.x, xBound);
+            }
+            transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
+
             yield return null;
         }
     }
@@ -209,5 +220,10 @@ public class Player : MonoBehaviour
 
         // end visualisation
         playerSprite.color = Color.white;
+    }
+
+    public void SetXBounds(float xBound)
+    {
+        this.xBound = xBound;
     }
 }
