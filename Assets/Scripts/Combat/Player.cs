@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private KeyCode attackKey = KeyCode.A; // also moves forward
     [SerializeField] private KeyCode dodgeKey = KeyCode.D;  // iframe, stay in position
     [SerializeField] private KeyCode specialKey = KeyCode.W;  // cast special ability
-    [SerializeField] private float thrust = 1f;
+    //[SerializeField] private float thrust = 1f;
 
     private Collider2D playerCollider;
     [SerializeField] private PlayerAttackCollider attackCollider;
@@ -28,6 +28,26 @@ public class Player : MonoBehaviour
     [SerializeField] private CharacterClass specialMove;
     [SerializeField] private bool isPlayerOne = true;
     private float xBound;
+
+    public void SetPlayerNumber(bool isPlayerOne, Vector3 forward, KeyCode attackKey, KeyCode dodgeKey, KeyCode specialKey)
+    {
+        // set isPlayerOne bool
+        this.isPlayerOne = isPlayerOne;
+
+        // assign their forward vectors
+        forwardDir = forward;
+
+        // assign action keys
+        this.attackKey = attackKey;
+        this.dodgeKey = dodgeKey;
+        this.specialKey = specialKey;
+
+        // flip p1 (x scale = -1)
+        if (isPlayerOne)
+            transform.localScale = new Vector3(-1, 1, 1);
+        else
+            transform.localScale = new Vector3(1, 1, 1);
+    }
 
     // Start is called before the first frame update
     void Start()

@@ -18,11 +18,15 @@ public class LevelSelect : MonoBehaviour
     private HazardsLoader hazloader;
     private HazardSpawner hazspawner;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         envloader = GetComponent<EnvLoader>();
         hazloader = GetComponent<HazardsLoader>();
         hazspawner = GetComponent<HazardSpawner>();
+    }
+
+    void Start()
+    {
         hazspawner.SetActiveHazard(hazloader.GetHazard(1));
         // ChangeAssets(3);
     }

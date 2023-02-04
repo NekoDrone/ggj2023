@@ -37,13 +37,13 @@ public class EnvLoader : MonoBehaviour
             res[2] = back1;
             res[3] = bg1;
         }
-        if(levelcode == 2){
+        else if(levelcode == 2){
             res[0] = floor2;
             res[1] = mid2;
             res[2] = null;
             res[3] = bg2;
         }
-        if(levelcode == 3){
+        else if (levelcode == 3){
             res[0] = floor3;
             res[1] = mid3;
             res[2] = null;

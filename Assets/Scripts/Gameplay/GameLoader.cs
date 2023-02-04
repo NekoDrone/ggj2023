@@ -21,7 +21,7 @@ public class GameLoader : MonoBehaviour
         // load environment
         levelSelector.ChangeAssets((int)DataSelectionManager.SelectedArena);
 
-        // TODO: load players
-
+        // load players
+        playerManager.LoadPlayers(DataSelectionManager.SelectedP1Class, DataSelectionManager.SelectedP2Class);
     }
 }
