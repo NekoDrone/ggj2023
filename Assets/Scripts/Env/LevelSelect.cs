@@ -14,27 +14,33 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] private GameObject mid;
     [SerializeField] private GameObject back;
     [SerializeField] private GameObject bg;
-    private EnvLoader loader;
+    private EnvLoader envloader;
+    private HazardsLoader hazloader;
+    private HazardSpawner hazspawner;
     // Start is called before the first frame update
     void Start()
     {
-        loader = GetComponent<EnvLoader>();
+        envloader = GetComponent<EnvLoader>();
+        hazloader = GetComponent<HazardsLoader>();
+        hazspawner = GetComponent<HazardSpawner>();
     }
 
     public void ChangeAssets(int levelcode)
     {
         Sprite[] sprites = new Sprite[4];
-        sprites = loader.GetLevelAssets(levelcode);
+        sprites = envloader.GetLevelAssets(levelcode);
         floor.GetComponent<SpriteRenderer>().sprite = sprites[0];
         mid.GetComponent<SpriteRenderer>().sprite = sprites[1];
         back.GetComponent<SpriteRenderer>().sprite = sprites[2];
         bg.GetComponent<SpriteRenderer>().sprite = sprites[3];
         float[] parallaxStrengths = new float[4];
-        parallaxStrengths = loader.GetParallaxStrengths(levelcode);
+        parallaxStrengths = envloader.GetParallaxStrengths(levelcode);
         floor.GetComponent<ParallaxEffect>().SetParallaxStrength(parallaxStrengths[0]);
         mid.GetComponent<ParallaxEffect>().SetParallaxStrength(parallaxStrengths[1]);
         back.GetComponent<ParallaxEffect>().SetParallaxStrength(parallaxStrengths[2]);
         bg.GetComponent<ParallaxEffect>().SetParallaxStrength(parallaxStrengths[3]);
+        hazspawner.SetActiveHazard(hazloader.GetHazard(levelcode));
+
     }
 
 }
