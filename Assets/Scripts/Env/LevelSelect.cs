@@ -23,6 +23,7 @@ public class LevelSelect : MonoBehaviour
         envloader = GetComponent<EnvLoader>();
         hazloader = GetComponent<HazardsLoader>();
         hazspawner = GetComponent<HazardSpawner>();
+        hazspawner.SetActiveHazard(hazloader.GetHazard(1));
     }
 
     public void ChangeAssets(int levelcode)

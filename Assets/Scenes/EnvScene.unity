@@ -266,9 +266,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2054ac733c5234292ac927538f09ba46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard1: {fileID: 0}
-  hazard2: {fileID: 0}
-  hazard3: {fileID: 0}
+  hazard1: {fileID: 8820817613579190047, guid: 507c2439f4f4c7646a5b08a1f7d21662, type: 3}
+  hazard2: {fileID: 3975803848002138897, guid: 0a00b93a3db19f440bb6c3c713afd0e2, type: 3}
+  hazard3: {fileID: 2283960160151679032, guid: d9b59ac4a20950b49894f2993c7704fc, type: 3}
 --- !u!114 &113074887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,6 +690,7 @@ GameObject:
   - component: {fileID: 1705449984}
   - component: {fileID: 1705449986}
   - component: {fileID: 1705449985}
+  - component: {fileID: 1705449987}
   m_Layer: 0
   m_Name: FloorPlatform
   m_TagString: Untagged
@@ -778,6 +779,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1705449987
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705449983}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.31963032}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.9, y: 5.22}
+    newSize: {x: 19.9, y: 5.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 19.9, y: 0.3798808}
+  m_EdgeRadius: 0
 --- !u!1 &1793037322
 GameObject:
   m_ObjectHideFlags: 0
