@@ -136,6 +136,8 @@ GameObject:
   - component: {fileID: 113074881}
   - component: {fileID: 113074884}
   - component: {fileID: 113074885}
+  - component: {fileID: 113074887}
+  - component: {fileID: 113074886}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -225,11 +227,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b89219935a70412da16a3cf04c1d2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currLevel: 0
-  floor: {fileID: 0}
-  mid: {fileID: 0}
-  back: {fileID: 0}
-  bg: {fileID: 0}
+  currLevel: 1
+  floor: {fileID: 1705449983}
+  mid: {fileID: 1053045382}
+  back: {fileID: 526242030}
+  bg: {fileID: 1130327695}
 --- !u!114 &113074885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +254,33 @@ MonoBehaviour:
   floor3: {fileID: 21300000, guid: 2eb6355d891bbf3469c1f0495733b175, type: 3}
   mid3: {fileID: 21300000, guid: 08125b10a96d65743bfd887da9e10f5a, type: 3}
   bg3: {fileID: 21300000, guid: b529e369ec74a0e4082849d31f30d444, type: 3}
+--- !u!114 &113074886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113074880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2054ac733c5234292ac927538f09ba46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hazard1: {fileID: 0}
+  hazard2: {fileID: 0}
+  hazard3: {fileID: 0}
+--- !u!114 &113074887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113074880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f91ecb1dc1c4935a460194fd1cd744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &526242030
 GameObject:
   m_ObjectHideFlags: 0

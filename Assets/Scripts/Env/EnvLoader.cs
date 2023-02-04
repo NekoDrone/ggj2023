@@ -39,9 +39,9 @@ public class EnvLoader : MonoBehaviour
         }
         if(levelcode == 2){
             res[0] = floor2;
-            res[1] = mid3;
+            res[1] = mid2;
             res[2] = null;
-            res[3] = bg3;
+            res[3] = bg2;
         }
         if(levelcode == 3){
             res[0] = floor3;
@@ -68,13 +68,13 @@ public class EnvLoader : MonoBehaviour
             res[0] = 1f;
             res[1] = 0.95f;
             res[2] = 0f;
-            res[3] = 1f;
+            res[3] = 0.7f;
         }
         if(levelcode == 3){
             res[0] = 0.95f;
             res[1] = 0.95f;
             res[2] = 0f;
-            res[3] = 1f;
+            res[3] = 0.7f;
         }
         return res;
     }
