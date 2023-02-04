@@ -2080,7 +2080,7 @@ GameObject:
   - component: {fileID: 1082045804}
   - component: {fileID: 1082045805}
   m_Layer: 5
-  m_Name: layout
+  m_Name: SettingsLayout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2288,6 +2288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   themeKey: Theme
   volumeKey: Volume
+  durationKey: Duration
 --- !u!4 &1200723122
 Transform:
   m_ObjectHideFlags: 0
