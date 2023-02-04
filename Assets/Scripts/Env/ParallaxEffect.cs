@@ -19,4 +19,9 @@ public class ParallaxEffect : MonoBehaviour
         float delta = cam.transform.position.x * parallaxStrength;
         transform.position = new Vector3(cameraPosition + delta, transform.position.y, transform.position.z);
     }
+
+    public void SetParallaxStrength(float str)
+    {
+        this.parallaxStrength = str;
+    }
 }
