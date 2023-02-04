@@ -32,6 +32,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Player player1;    // TODO: remove the SerializeField
     [SerializeField] private Player player2;
 
+    [SerializeField] private CombatUI_Player combatUIPlayer;
+
     private Collider2D player1Col;
     private Collider2D player2Col;
 
@@ -71,7 +73,8 @@ public class PlayerManager : MonoBehaviour
         player2.SetPlayerNumber(false, p2ForwardVector, p2AttackKey, p2DodgeKey, p2SpecialKey);
 
         // update combat UI
-
+        combatUIPlayer.SetPlayer1(p1);
+        combatUIPlayer.SetPlayer2(p2);
 
         // get colliders
         player1Col = player1.GetComponent<Collider2D>();

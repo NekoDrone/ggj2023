@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 60042489}
   - component: {fileID: 60042488}
   m_Layer: 5
-  m_Name: PlayerSkillText_1
+  m_Name: PlayerSkillText_P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 255349878}
   - component: {fileID: 255349877}
   m_Layer: 5
-  m_Name: PlayerSkillText_2
+  m_Name: PlayerSkillText_P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 418560117}
   - component: {fileID: 418560116}
   m_Layer: 5
-  m_Name: PlayerSkill_2
+  m_Name: PlayerSkill_P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -718,7 +718,7 @@ GameObject:
   - component: {fileID: 426347298}
   - component: {fileID: 426347297}
   m_Layer: 5
-  m_Name: PlayerPic_1
+  m_Name: PlayerPic_P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1162,7 +1162,7 @@ GameObject:
   - component: {fileID: 775793054}
   - component: {fileID: 775793053}
   m_Layer: 5
-  m_Name: SpecialBar_2
+  m_Name: SpecialBar_P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1437,7 +1437,7 @@ GameObject:
   - component: {fileID: 993355939}
   - component: {fileID: 993355938}
   m_Layer: 5
-  m_Name: PlayerNameText_1
+  m_Name: PlayerNameText_P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1656,6 +1656,7 @@ GameObject:
   - component: {fileID: 1036825790}
   - component: {fileID: 1036825789}
   - component: {fileID: 1036825788}
+  - component: {fileID: 1036825792}
   m_Layer: 5
   m_Name: Canvas_CombatUI
   m_TagString: Untagged
@@ -1756,6 +1757,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1036825792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036825787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614b232c02cf2c94581960f01fa3f51d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIconsList:
+  - playerClass: 0
+    playerName: CARRO-TENE
+    playerIcon: {fileID: 21300000, guid: 351be35969fc7f447949b465910f345b, type: 3}
+    skillName: CARROT DELIGHT
+    skillIcon: {fileID: 21300000, guid: 08cd0e5a911d0374981e4b8958ada9b3, type: 3}
+  - playerClass: 2
+    playerName: DAI-KON
+    playerIcon: {fileID: 21300000, guid: 70900498286d2c7428b723cb772aa402, type: 3}
+    skillName: DAIKON POWER SLAM
+    skillIcon: {fileID: 21300000, guid: 7d4bfefe158307949b046fc2f514cd02, type: 3}
+  player1Name: {fileID: 993355938}
+  player1Icon: {fileID: 426347297}
+  player1SkillName: {fileID: 60042488}
+  player1Skill: {fileID: 1644896300}
+  player2Name: {fileID: 1618725149}
+  player2Icon: {fileID: 1646294340}
+  player2SkillName: {fileID: 255349877}
+  player2Skill: {fileID: 418560116}
 --- !u!1 &1057657045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,6 +1834,7 @@ MonoBehaviour:
   p2SpecialKey: 273
   player1: {fileID: 1165690995}
   player2: {fileID: 689601211}
+  combatUIPlayer: {fileID: 1036825792}
 --- !u!4 &1057657047
 Transform:
   m_ObjectHideFlags: 0
@@ -2601,7 +2634,7 @@ GameObject:
   - component: {fileID: 1618725150}
   - component: {fileID: 1618725149}
   m_Layer: 5
-  m_Name: PlayerNameText_2
+  m_Name: PlayerNameText_P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2736,7 +2769,7 @@ GameObject:
   - component: {fileID: 1644896301}
   - component: {fileID: 1644896300}
   m_Layer: 5
-  m_Name: PlayerSkill_1
+  m_Name: PlayerSkill_P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2812,7 +2845,7 @@ GameObject:
   - component: {fileID: 1646294341}
   - component: {fileID: 1646294340}
   m_Layer: 5
-  m_Name: PlayerPic_2
+  m_Name: PlayerPic_P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3177,7 +3210,7 @@ GameObject:
   - component: {fileID: 1757828767}
   - component: {fileID: 1757828766}
   m_Layer: 5
-  m_Name: SpecialBar_1
+  m_Name: SpecialBar_P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
