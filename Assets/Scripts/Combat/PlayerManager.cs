@@ -31,7 +31,15 @@ public class PlayerManager : MonoBehaviour
 
     // reference to Player1 and Player2 objects in the scene
     private Player player1;
+    public Player Player1
+    {
+        get { return player1; }
+    }
     private Player player2;
+    public Player Player2
+    {
+        get { return player2; }
+    }
     private Collider2D player1Col;
     private Collider2D player2Col;
 
@@ -66,6 +74,10 @@ public class PlayerManager : MonoBehaviour
         // instantiate p1 and p2 at spawn points
         player1 = Instantiate(playerClassPool[p1], p1SpawnPoint.transform.position, Quaternion.identity);
         player2 = Instantiate(playerClassPool[p2], p2SpawnPoint.transform.position, Quaternion.identity);
+
+        // assign class
+        player1.PlayerClass = p1;
+        player2.PlayerClass = p2;
 
         // set control attributes depending on p1 or p2
         player1.SetPlayerNumber(true, p1ForwardVector, p1AttackKey, p1DodgeKey, p1SpecialKey);

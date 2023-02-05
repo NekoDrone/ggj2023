@@ -29,6 +29,14 @@ public class Player : MonoBehaviour
     [SerializeField] private bool isPlayerOne = true;
     private float xBound;
 
+    [Header("Win/Lose Animation Sprites")]
+    [SerializeField] private Sprite winSprite;
+    [SerializeField] private Sprite loseSprite;
+    [SerializeField] private Sprite attackSprite;
+    [SerializeField] private Sprite hurtSprite;
+
+    public PlayerClass PlayerClass { get; set; }
+
     public void SetPlayerNumber(bool isPlayerOne, Vector3 forward, KeyCode attackKey, KeyCode dodgeKey, KeyCode specialKey)
     {
         // set isPlayerOne bool
@@ -245,5 +253,64 @@ public class Player : MonoBehaviour
     public void SetXBounds(float xBound)
     {
         this.xBound = xBound;
+    }
+
+    public void TriggerWin()
+    {
+        // disable Animator
+        GetComponent<Animator>().enabled = false;
+
+        // stop movement
+        CancelMove();
+
+        // end visualisation
+        playerSprite.color = Color.white;
+
+        // start animating
+        StartCoroutine(WinAnimation());
+    }
+    public void TriggerLose()
+    {
+        // disable Animator
+        GetComponent<Animator>().enabled = false;
+
+        // stop movement
+        CancelMove();
+
+        // end visualisation
+        playerSprite.color = Color.white;
+
+        // start animating
+        StartCoroutine(LoseAnimation());
+    }
+
+    private IEnumerator WinAnimation()
+    {
+        // replace with attack sprite
+        playerSprite.sprite = attackSprite;
+        yield return new WaitForSeconds(1.5f);
+
+        // replace with win sprite
+        playerSprite.sprite = winSprite;
+        playerSprite.transform.localScale = new Vector3(0.55f, 0.55f, 1f);
+    }
+
+    private IEnumerator LoseAnimation()
+    {
+        // replace with hurt sprite
+        playerSprite.sprite = hurtSprite;
+
+        yield return new WaitForSeconds(1f);
+
+        // translate entity towards death position
+        float targetXPos = (transform.position - forwardDir * 2.5f).x;
+        while (Mathf.Abs(transform.position.x) < Mathf.Abs(targetXPos)) {
+            transform.position -= forwardDir * 2f * forwardMoveSpeed * Time.deltaTime;
+            yield return null;
+        }
+
+        // replace with lose sprite
+        playerSprite.sprite = loseSprite;
+        playerSprite.transform.localScale = new Vector3(0.55f, 0.55f, 1f);
     }
 }

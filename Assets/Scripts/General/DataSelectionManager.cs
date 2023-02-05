@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class DataSelectionManager : MonoBehaviour
 {
-    public static ArenaSelection SelectedArena { get; private set; } = ArenaSelection.Fridge;
+    public static ArenaSelection SelectedArena { get; private set; } = ArenaSelection.Mookata;
     public static PlayerClass SelectedP1Class { get; private set; } = PlayerClass.Onion;
     public static PlayerClass SelectedP2Class { get; private set; } = PlayerClass.Potato;
 
