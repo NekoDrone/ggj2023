@@ -197,10 +197,10 @@ public class Player : MonoBehaviour
             transform.position += forwardDir * forwardMoveSpeed * Time.deltaTime;
             float xPos;
             if (isPlayerOne) {
-                xPos = Mathf.Min(transform.position.x, xBound);
+                xPos = Mathf.Min(transform.position.x, xBound - playerCollider.bounds.size.x / 2);
             }
             else {
-                xPos = Mathf.Max(transform.position.x, xBound);
+                xPos = Mathf.Max(transform.position.x, xBound + playerCollider.bounds.size.x / 2);
             }
             transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
 

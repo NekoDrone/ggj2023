@@ -253,7 +253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &172272347
 RectTransform:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 60}
-  m_SizeDelta: {x: 250, y: 30}
+  m_SizeDelta: {x: 270, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &172272348
 MonoBehaviour:
@@ -294,7 +294,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $chardetails
+  m_text: "Description: If DAI-KON is the brawns, CARRO-TENE is the brains. Don\u2019t
+    let him fool you, he carries mighty weapons that will blow your mind."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 695c2ad8085f0714a8c65332dd3d1793, type: 2}
   m_sharedMaterial: {fileID: 3344898815938828180, guid: 695c2ad8085f0714a8c65332dd3d1793, type: 2}
@@ -321,8 +322,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1359,7 +1360,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13b95d7037abe8340bc68641b7386eac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 11f2285c7473e9d49b0f77beb8a0d88e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1675,8 +1676,8 @@ RectTransform:
   m_LocalScale: {x: 2.219994, y: 1.5500009, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 806019900}
   - {fileID: 967574932}
+  - {fileID: 806019900}
   - {fileID: 409744882}
   m_Father: {fileID: 189752759}
   m_RootOrder: 5
@@ -1741,7 +1742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &540027438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2450,7 +2451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: -200}
+  m_AnchoredPosition: {x: 200, y: -156}
   m_SizeDelta: {x: 300, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637028048
@@ -2473,9 +2474,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7fda3b4f2a40ff143a67654ef85eff70, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2508,7 +2509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &638037642
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2708,7 +2709,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 675747376}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1129891915}
+        m_TargetAssemblyTypeName: DataSelectionManager, Assembly-CSharp
+        m_MethodName: SetSelectedArena
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1350230866}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: ArenaButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &675747376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3045,7 +3070,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13b95d7037abe8340bc68641b7386eac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad379ea9fe8ae49419b807ec6db467df, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3125,16 +3150,16 @@ RectTransform:
   m_GameObject: {fileID: 806019899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.45045045, y: 0.64516133, z: 1}
+  m_LocalScale: {x: 0.45045042, y: 0.6451613, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 532123035}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: 20}
-  m_SizeDelta: {x: 462.3024, y: 97.3987}
+  m_AnchoredPosition: {x: -200, y: 39.999973}
+  m_SizeDelta: {x: 500, y: 97.3987}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &806019901
 MonoBehaviour:
@@ -3156,7 +3181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $charname
+  m_text: CARRO-TENE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 695c2ad8085f0714a8c65332dd3d1793, type: 2}
   m_sharedMaterial: {fileID: 3344898815938828180, guid: 695c2ad8085f0714a8c65332dd3d1793, type: 2}
@@ -4021,16 +4046,16 @@ RectTransform:
   m_GameObject: {fileID: 967574931}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.45045045, y: 0.64516133, z: 1}
+  m_LocalScale: {x: -0.4504504, y: 0.6451613, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 532123035}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: -200}
-  m_SizeDelta: {x: 300, y: 500}
+  m_AnchoredPosition: {x: -199.99994, y: -134}
+  m_SizeDelta: {x: 200, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &967574933
 MonoBehaviour:
@@ -4052,9 +4077,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9691c20be004bd44fb33b4f861688fcd, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -4575,7 +4600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1081183786
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4739,6 +4764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1129891914}
+  - component: {fileID: 1129891915}
   m_Layer: 0
   m_Name: ArenaSelectGroup
   m_TagString: Untagged
@@ -4767,6 +4793,18 @@ Transform:
   m_Father: {fileID: 1350230865}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1129891915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129891913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98595713fcbb5540a825247200a13b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1147537837
 GameObject:
   m_ObjectHideFlags: 0
@@ -4822,7 +4860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1192875732
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5189,7 +5227,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1300601620}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1129891915}
+        m_TargetAssemblyTypeName: DataSelectionManager, Assembly-CSharp
+        m_MethodName: SetSelectedArena
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1350230866}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: ArenaButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1300601620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5427,6 +5489,7 @@ MonoBehaviour:
   SettingsGroup: {fileID: 1533599975}
   ArenaSelectGroup: {fileID: 1129891913}
   CreditsGroup: {fileID: 0}
+  CharSelectGroup: {fileID: 189752758}
 --- !u!1 &1368955992
 GameObject:
   m_ObjectHideFlags: 0
@@ -5720,7 +5783,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1381613555}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1129891915}
+        m_TargetAssemblyTypeName: DataSelectionManager, Assembly-CSharp
+        m_MethodName: SetSelectedArena
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1350230866}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: ArenaButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1381613555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6618,6 +6705,7 @@ GameObject:
   - component: {fileID: 1720573988}
   - component: {fileID: 1720573987}
   - component: {fileID: 1720573986}
+  - component: {fileID: 1720573989}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -6688,7 +6776,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1720573987}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1720573989}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1720573987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6727,6 +6827,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720573984}
   m_CullTransparentMesh: 1
+--- !u!114 &1720573989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720573984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63bfa22f62fbbd449b67ec4413b8f6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: GameScene
 --- !u!1 &1741364415
 GameObject:
   m_ObjectHideFlags: 0
@@ -6802,8 +6915,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: 20}
-  m_SizeDelta: {x: 462.3024, y: 97.3987}
+  m_AnchoredPosition: {x: 200, y: 39.99997}
+  m_SizeDelta: {x: 500, y: 97.3987}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765049504
 MonoBehaviour:
@@ -6825,7 +6938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $charname
+  m_text: DAI-KON
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 695c2ad8085f0714a8c65332dd3d1793, type: 2}
   m_sharedMaterial: {fileID: 3344898815938828180, guid: 695c2ad8085f0714a8c65332dd3d1793, type: 2}
@@ -7579,7 +7692,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1878579222}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1129891915}
+        m_TargetAssemblyTypeName: DataSelectionManager, Assembly-CSharp
+        m_MethodName: SetSelectedArena
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1350230866}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: ArenaButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1878579222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8080,7 +8217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1973384389
 RectTransform:
   m_ObjectHideFlags: 0

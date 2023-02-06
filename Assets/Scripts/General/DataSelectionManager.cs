@@ -7,9 +7,9 @@ using UnityEngine;
 /// </summary>
 public class DataSelectionManager : MonoBehaviour
 {
-    public static ArenaSelection SelectedArena { get; private set; } = ArenaSelection.Mookata;
-    public static PlayerClass SelectedP1Class { get; private set; } = PlayerClass.Onion;
-    public static PlayerClass SelectedP2Class { get; private set; } = PlayerClass.Potato;
+    public static ArenaSelection SelectedArena { get; private set; } = ArenaSelection.Random;
+    public static PlayerClass SelectedP1Class { get; private set; } = PlayerClass.Carrot;
+    public static PlayerClass SelectedP2Class { get; private set; } = PlayerClass.Daikon;
 
     /// <summary>
     /// To be called by Button OnClick callback

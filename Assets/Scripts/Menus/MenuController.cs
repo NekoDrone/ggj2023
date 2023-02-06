@@ -8,6 +8,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject SettingsGroup;
     [SerializeField] private GameObject ArenaSelectGroup;
     [SerializeField] private GameObject CreditsGroup;
+    [SerializeField] private GameObject CharSelectGroup;
     private GameObject CurrGroup;
     void Start()
     {
@@ -46,5 +47,12 @@ public class MenuController : MonoBehaviour
         CurrGroup.SetActive(false);
         CurrGroup = MainMenuGroup;
         MainMenuGroup.SetActive(true);
+    }
+
+    public void ArenaButtonClicked()
+    {
+        CurrGroup.SetActive(false);
+        CurrGroup = CharSelectGroup;
+        CharSelectGroup.SetActive(true);
     }
 }
