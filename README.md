@@ -9,13 +9,16 @@ This project uses Unity 2021.3.16f1.
 
 StRoot Fighters is a 2-player fighting game where players fight as vegetables against each other, with the goal of pushing the other off the arena.
 
-StRoot Fighters is a simple versus fighting game where players fight as vegetables against each other, with the goal of pushing the other off the arena.
-
 Each character also comes with a special skill that can be used to create openings or advantages for the player. (To be implemented)
 
 ### How to play:
-- Move forward by attacking the enemy
-- Dodging the enemy's attacks
+Only 3 buttons!
+- Move forward/attack
+- Move backward/dodge
+- Special attack (To be implemented)
+
+Player 1 (L): A/S/D
+Player 2 (R): Left/Down/Right Arrow
 
 Win by making the other player fall off the arena, or push your opponent as close to their edge of the arena as possible when the timer is up!
 
